@@ -1,0 +1,42 @@
+title LinkRoller
+link(rel="stylesheet", href="/style.css")
+
+div(id="header")
+    h1 LinkRoller
+    h2 Disguise your rickroll link with Open Graph tags.
+
+br
+
+if message
+    div(id="alert")
+        h1 #{message}
+
+div(id="how")
+    h3 How to Use
+
+    ol
+        li Below, fill out the title, description, and optional image to disguise your link as.
+        li Click "Generate Link"
+        li Use a link shortner like #[a(href="https://bitly.com") Bitly] to shorten the link.
+        li Send the shortened link to your friends! 
+
+br
+
+div(id="form")
+    form(action="", method="post")
+        label(for="title") Title: 
+        input(type="text", name="title" maxlength="100" required)
+        br
+        label(for="description") Description: 
+        input(type="text", name="description" maxlength="200")
+        br
+        label(for="image") Image URL: (Optional) 
+        input(type="text", name="image" maxlength="100")
+        br
+        input(type="submit", value="Submit")
+
+if link
+    div(id="result")
+        a(href=link target="_blank") #{link}
+        br
+        input(type="button", value="Copy Link" onClick="navigator.clipboard.writeText('" + link + "')")

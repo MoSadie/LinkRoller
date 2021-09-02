@@ -1,0 +1,22 @@
+#header {
+    background-color: #0077ff;
+    text-align: center;
+}
+
+#alert {
+    background-color: red;
+    text-align: center;
+}
+
+@keyframes loading {
+    from {opacity: 1;}
+    to {opacity: 0.25;}
+}
+
+.loadinganim {
+    animation: .6s linear 0s infinite alternate loading
+}
+
+.centered {
+    text-align: center;
+}

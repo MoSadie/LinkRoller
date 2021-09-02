@@ -44,4 +44,4 @@ app.get('/roll', function (req, res) {
 
 app.use(express.static('public'))
 
-app.listen(80);
+app.listen(process.env.NODE_ENV == "production" ? 80 : 8080);

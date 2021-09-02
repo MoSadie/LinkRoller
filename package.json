@@ -1,0 +1,15 @@
+{
+  "name": "linkroller",
+  "version": "1.0.0",
+  "description": "Disguise your rickroll links",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "MoSadie",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}

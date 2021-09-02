@@ -1,0 +1,20 @@
+title Redirecting...
+meta(property="og:title" content=title)
+if description
+    meta(property="og:description" content=description)
+    meta(name="description", content=description)
+if image
+    meta(property="og:image" content=image)
+
+meta(property="og:url" content="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+meta(property="og:type" content="website")
+
+link(rel="stylesheet", href="/style.css")
+script(src="/roll.js") 
+
+div(class="centered")
+    h1 Please wait while you are redirected to your content...
+    h2 This will only take a second.
+    h1 #[span(class="loadinganim") .]#[span(class="loadinganim" style="animation-delay: 0.2s") .]#[span(class="loadinganim" style="animation-delay: 0.4s") .]
+
+script startDelayedRedirect()

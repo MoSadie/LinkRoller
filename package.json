@@ -2,9 +2,9 @@
   "name": "linkroller",
   "version": "1.0.0",
   "description": "Disguise your rickroll links",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "node index.js"
   },
   "author": "MoSadie",
   "license": "GPL-3.0-only",

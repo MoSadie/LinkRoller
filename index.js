@@ -45,7 +45,8 @@ app.get('/roll', function (req, res) {
 app.use(express.static('public'))
 
 if (process.env.NODE_ENV == "production") {
-    app.listen(80);
+    console.log("starting express server")
+    app.listen(process.env.PORT || 80);
 } else if (process.env.NODE_ENV == "development") {
     app.listen(8080);
 }

@@ -1,4 +1,7 @@
 {
     "appService.defaultWebAppToDeploy": "/subscriptions/4c5b1021-f9cf-4e5b-87d0-c965c47ac2d9/resourceGroups/linkroller/providers/Microsoft.Web/sites/linkroller",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "terminal.integrated.env.windows": {
+        "NODE_ENV": "development"
+    }
 }

@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: false}));
 const regex = /[<>"'\\]/g
 function strip(str) {
     return str.replace(regex, "");
-};
+}
 
 app.post('/', function (req, res) {
     if (req.body.title) {
@@ -30,7 +30,7 @@ app.post('/', function (req, res) {
 
         res.render('home', options);
     } else {
-        res.render('home', {message: 'Something went wrong, please try again.'});
+        res.render('home', {message: 'Missing title, please add a title.'});
     }
 });
 

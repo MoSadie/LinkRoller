@@ -25,13 +25,13 @@ br
 div(id="form")
     form(action="", method="post")
         label(for="title") Title: 
-        input(type="text", name="title" maxlength="100" required)
+        input(type="text", name="title" maxlength="200" required)
         br
-        label(for="description") Description: 
-        input(type="text", name="description" maxlength="200")
+        label(for="description") Description: (Optional) 
+        input(type="text", name="description" maxlength="400")
         br
         label(for="image") Image URL: (Optional) 
-        input(type="text", name="image" maxlength="100")
+        input(type="text", name="image" maxlength="200")
         br
         input(type="submit", value="Submit")
 

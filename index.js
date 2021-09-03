@@ -19,8 +19,8 @@ function strip(str) {
 }
 
 app.post('/', function (req, res) {
-    if (req.body.title) {
-        var options = {link: baseURL + "/roll?title=" + encodeURIComponent(strip(req.body.title))};
+    if (req.body.title && req.body.target) {
+        var options = {link: baseURL + "/" + encodeURIComponent(strip(req.body.target)) + "?title=" + encodeURIComponent(strip(req.body.title))};
         if (req.body.description) {
             options.link += "&description=" + encodeURIComponent(strip(req.body.description));
         }
@@ -37,6 +37,14 @@ app.post('/', function (req, res) {
 app.get('/roll', function (req, res) {
     if (req.query.title) {
         res.render('roll', {title: req.query.title, description: req.query.description, image: req.query.image});
+    } else {
+        res.render('bad-link');
+    }
+});
+
+app.get('/stick', function (req, res) {
+    if (req.query.title) {
+        res.render('stick', {title: req.query.title, description: req.query.description, image: req.query.image});
     } else {
         res.render('bad-link');
     }

@@ -33,6 +33,11 @@ div(id="form")
         label(for="image") Image URL: (Optional) 
         input(type="text", name="image" maxlength="200")
         br
+        label(for="target") Redirect Destination: 
+        select(name="target" required)
+            option(value="roll" selected) Rickroll
+            option(value="stick") Stickbug
+        br 
         input(type="submit", value="Submit")
 
 if link
